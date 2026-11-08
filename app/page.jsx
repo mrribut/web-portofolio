@@ -194,7 +194,7 @@ export default function Home() {
               <span className="timeline-period">{item.period}</span>
               <div className="timeline-main"><p className="eyebrow">{item.type}</p><h3>{item.role}</h3><p className="timeline-company">{item.company}</p></div>
               <p className="timeline-detail">{item.detail}</p>
-              <span className="timeline-arrow">↗</span>
+              <span className="timeline-arrow" aria-hidden="true">→</span>
             </article>
           ))}
         </div>
