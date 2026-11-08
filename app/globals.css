@@ -785,6 +785,11 @@ html[data-theme="dark"] .portrait-frame { border-color: #111b2a; }
 .project-link { color: var(--accent-dark); }
 .work .project-card .project-meta span:first-child,
 .work .project-card .project-link span { color: var(--accent-dark); }
+
+/* Keep the portrait centered after the mobile width override. */
+@media (max-width: 680px) {
+  .hero-portrait-wrap { margin-inline: auto; }
+}
 .work .project-card .project-image { background: color-mix(in srgb, var(--accent) 8%, var(--surface)); }
 .experience .timeline-period { color: var(--accent-dark); background: #e9e7e0; }
 .contact-form button { background: #61788f; }
