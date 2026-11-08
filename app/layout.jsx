@@ -1,7 +1,7 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Sahrul Ageng Prasetyo — Web Developer",
+  title: "Sahrul Ageng Prasetyo — Portofolio",
   description:
     "Portofolio Sahrul Ageng Prasetyo, lulusan Teknik Informatika yang berfokus pada pengembangan sistem berbasis web.",
 };

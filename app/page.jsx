@@ -157,7 +157,7 @@ export default function Home() {
           <h1 className="hero-title">Membangun<br /><span className="hero-highlight">solusi web</span><br />yang berguna<span className="title-period">.</span></h1>
           <p className="hero-intro">Halo, saya <strong>Sahrul Ageng Prasetyo</strong>, lulusan Teknik Informatika yang berfokus pada pengembangan sistem berbasis web.</p>
           <div className="hero-actions">
-            <a className="button button-dark" href="/CV.pdf" target="_blank" rel="noreferrer">Lihat CV <span>&#8599;</span></a>
+            <a className="button button-dark" href="/CV.pdf" target="_blank" rel="noreferrer">Lihat CV</a>
           </div>
         </div>
         <div className="hero-portrait-wrap">
@@ -180,7 +180,7 @@ export default function Home() {
           <div className="about-detail">
             <p>Memiliki latar belakang pendidikan di bidang Teknik Informatika dengan pemahaman dalam pengembangan perangkat lunak, khususnya aplikasi berbasis web, serta pengalaman praktis melalui program magang di perusahaan pengembangan perangkat lunak. Didukung kemampuan berpikir analitis, pemecahan masalah, komunikasi, dan adaptasi yang baik, serta pengalaman kerja di bidang pelayanan pelanggan dan ritel.</p>
             <p>Saya ingin terus berkembang dan berkontribusi dalam tim yang membangun produk digital dengan perhatian pada fungsi dan pengalaman penggunanya.</p>
-            <a className="text-link dark-link" href="mailto:sahrulap66@gmail.com">Hubungi saya <span>↗</span></a>
+            <a className="text-link dark-link" href="mailto:sahrulap66@gmail.com">Hubungi saya</a>
           </div>
         </div>
       </section>
@@ -194,7 +194,6 @@ export default function Home() {
               <span className="timeline-period">{item.period}</span>
               <div className="timeline-main"><p className="eyebrow">{item.type}</p><h3>{item.role}</h3><p className="timeline-company">{item.company}</p></div>
               <p className="timeline-detail">{item.detail}</p>
-              <span className="timeline-arrow" aria-hidden="true">→</span>
             </article>
           ))}
         </div>
@@ -219,9 +218,8 @@ export default function Home() {
             <article className={`project-card ${project.accent} reveal`} key={project.number}>
               <a className="project-image" href={project.link} target="_blank" rel="noreferrer" aria-label={`Buka ${project.title}`}>
                 <img src={project.image} alt={`Tampilan ${project.title}`} loading="lazy" />
-                <span className="project-image-arrow">↗</span>
               </a>
-              <div className="project-info"><div className="project-meta"><span>{project.number}</span><span>{project.category}</span></div><h3>{project.title}</h3><p>{project.description}</p><a className="project-link" href={project.link} target="_blank" rel="noreferrer">Lihat proyek <span>↗</span></a></div>
+              <div className="project-info"><div className="project-meta"><span>{project.number}</span><span>{project.category}</span></div><h3>{project.title}</h3><p>{project.description}</p><a className="project-link" href={project.link} target="_blank" rel="noreferrer">Lihat proyek</a></div>
             </article>
           ))}
         </div>
@@ -234,12 +232,12 @@ export default function Home() {
 
       <section className="contact section-shell section-pad" id="contact">
         <div className="contact-inner reveal"><div className="section-label"> KONTAK</div><p className="contact-pretitle">PUNYA IDE ATAU PELUANG?</p><h2>Mari mulai<br /><span className="serif-word">percakapan.</span></h2>
-          <div className="contact-bottom"><a className="contact-email" href="mailto:sahrulap66@gmail.com">sahrulap66@gmail.com <span>↗</span></a><div className="contact-info"><a href="tel:+6282145528676">+62 821-4552-8676</a><span>Wonogiri, Jawa Tengah</span><div className="social-list">{socials.map((social) => <a href={social.href} target="_blank" rel="noreferrer" key={social.label}>{social.label}<span>↗</span></a>)}</div></div><form className="contact-form" onSubmit={sendMessage}><label>Nama<input name="name" placeholder="Nama kamu" required /></label><label>Email<input name="email" type="email" placeholder="email@contoh.com" required /></label><label>Pesan<textarea name="message" rows="3" placeholder="Ceritakan yang ingin kamu diskusikan" required /></label><button type="submit">Kirim pesan <span>↗</span></button></form></div>
+          <div className="contact-bottom"><a className="contact-email" href="mailto:sahrulap66@gmail.com">sahrulap66@gmail.com</a><div className="contact-info"><a href="tel:+6282145528676">+62 821-4552-8676</a><span>Wonogiri, Jawa Tengah</span><div className="social-list">{socials.map((social) => <a href={social.href} target="_blank" rel="noreferrer" key={social.label}>{social.label}</a>)}</div></div><form className="contact-form" onSubmit={sendMessage}><label>Nama<input name="name" placeholder="Nama kamu" required /></label><label>Email<input name="email" type="email" placeholder="email@contoh.com" required /></label><label>Pesan<textarea name="message" rows="3" placeholder="Ceritakan yang ingin kamu diskusikan" required /></label><button type="submit">Kirim pesan</button></form></div>
         </div>
       </section>
 
       <footer className="footer section-shell"><span>© {new Date().getFullYear()} Sahrul Ageng Prasetyo</span></footer>
-      {showTop && <button className="back-to-top" type="button" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} aria-label="Kembali ke atas">↑</button>}
+      {showTop && <button className="back-to-top" type="button" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} aria-label="Kembali ke atas">Atas</button>}
     </main>
   );
 }

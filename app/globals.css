@@ -820,8 +820,6 @@ button, input, textarea { font-family: 'Inter', 'Segoe UI', sans-serif; }
 .timeline-item { width: 100%; border-top: 0; border-right: 0; border-left: 0; color: var(--ink); background: transparent; text-align: left; cursor: pointer; font: inherit; }
 .timeline-item:focus-visible { outline-offset: -3px; }
 .timeline-item:hover .timeline-arrow { transform: translate(2px, -2px); }
-.experience .timeline-arrow { display: grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; color: var(--accent-dark); background: var(--surface-soft); font-size: 1rem; line-height: 1; transition: transform .2s, background .2s; }
-.experience .timeline-item:hover .timeline-arrow { background: color-mix(in srgb, var(--accent) 16%, var(--surface-soft)); }
 .experience-gallery { width: min(900px, 100%); }
 .experience-gallery > h3 { margin: 0 42px 18px 0; font: 700 1.1rem 'Manrope', sans-serif; }
 .experience-gallery > h3 span { color: var(--muted); font-size: .9rem; font-weight: 500; }
@@ -861,3 +859,5 @@ body, button, input, textarea { font-family: 'Manrope', 'Segoe UI', sans-serif; 
 .hero-intro, .about-detail p, .timeline-detail, .project-info p, .contact-info { font-weight: 500; }
 .navigation a, .nav-cta, .text-link, .project-link, .contact-form label, .contact-form button { font-weight: 700; }
 .skill-chip small, .lightbox-panel p span { font-family: 'Manrope', 'Segoe UI', sans-serif; }
+.back-to-top { width: auto; min-width: 58px; padding-inline: 14px; border-radius: 999px; font-size: .72rem; font-weight: 700; }
+
