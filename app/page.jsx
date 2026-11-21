@@ -67,6 +67,11 @@ const projects = [
 
 const skills = ["HTML5", "CSS3", "JavaScript", "PHP", "Laravel", "React", "MySQL", "Canva", "CapCut", "Microsoft Office"];
 
+const certifications = [
+  { number: "01", title: "English Proficiency Test (EPT)", issuer: "Kampus", category: "KEMAMPUAN BAHASA", description: "Sertifikat kemampuan bahasa Inggris dari kampus.", file: "/EPT.pdf", mark: "EN" },
+  { number: "02", title: "Junior Web Programming", issuer: "Badan Nasional Sertifikasi Profesi (BNSP)", category: "SERTIFIKASI KOMPETENSI", description: "Sertifikasi kompetensi di bidang pemrograman web tingkat junior.", file: "/UJK.pdf", mark: "WEB" },
+];
+
 const socials = [
   { label: "LinkedIn", href: "https://linkedin.com/in/sahrul-ageng-prasetyo-8a9606367" },
   { label: "GitHub", href: "https://github.com/mrribut" },
@@ -79,6 +84,7 @@ const navItems = [
   ["Profil", "about"],
   ["Pengalaman", "experience"],
   ["Karya", "work"],
+  ["Sertifikasi", "certifications"],
   ["Keahlian", "skills"],
   ["Kontak", "contact"],
 ];
@@ -186,10 +192,11 @@ export default function Home() {
       </section>
 
       <section className="experience section-shell section-pad" id="experience">
-        <div className="section-heading reveal"><div className="section-label"> PENGALAMAN</div><h2>Pengalaman kerja.</h2></div>
+        <div className="section-heading reveal"><div className="section-label"> PENGALAMAN</div><h2>Pengalaman<br /><span className="serif-word">profesional.</span></h2></div>
         <div className="timeline">
           {experiences.map((item, index) => (
             <article className="timeline-item reveal" role="button" tabIndex={0} key={item.role} style={{ "--delay": `${index * 100}ms` }} onClick={() => setActiveExperience(item)} onKeyDown={(event) => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); setActiveExperience(item); } }} aria-label={`Lihat bukti foto pengalaman ${item.role} di ${item.company}`}>
+              <span className="timeline-preview" aria-hidden="true"><img src={item.photos[0]} alt="" loading="lazy" /></span>
               <span className="timeline-dot" />
               <span className="timeline-period">{item.period}</span>
               <div className="timeline-main"><p className="eyebrow">{item.type}</p><h3>{item.role}</h3><p className="timeline-company">{item.company}</p></div>
@@ -220,6 +227,22 @@ export default function Home() {
                 <img src={project.image} alt={`Tampilan ${project.title}`} loading="lazy" />
               </a>
               <div className="project-info"><div className="project-meta"><span>{project.number}</span><span>{project.category}</span></div><h3>{project.title}</h3><p>{project.description}</p><a className="project-link" href={project.link} target="_blank" rel="noreferrer">Lihat proyek</a></div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="certifications section-shell section-pad" id="certifications">
+        <div className="section-heading reveal"><div className="section-label">SERTIFIKASI</div><h2>Belajar, bertumbuh,<br /><span className="serif-word">dan terverifikasi.</span></h2></div>
+        <div className="certification-grid">
+          {certifications.map((certificate) => (
+            <article className="certificate-card reveal" key={certificate.number}>
+              <div className="certificate-top"><span className="certificate-number">{certificate.number}</span><span className="certificate-mark" aria-hidden="true">{certificate.mark}</span></div>
+              <p className="eyebrow">{certificate.category}</p>
+              <h3>{certificate.title}</h3>
+              <p className="certificate-issuer">{certificate.issuer}</p>
+              <p className="certificate-description">{certificate.description}</p>
+              <a className="certificate-link" href={certificate.file} target="_blank" rel="noreferrer">Lihat sertifikat</a>
             </article>
           ))}
         </div>
